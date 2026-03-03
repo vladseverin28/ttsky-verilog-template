@@ -1,20 +1,37 @@
-<!---
+# Structural 8-bit ALU
 
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
+## Design Description
 
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
+This project implements a simple 8-bit Arithmetic Logic Unit (ALU) using structural Verilog. The ALU takes two 8-bit inputs (a and b) and a 2-bit operation selector (op). Depending on the value of op, the circuit performs one of four operations:
 
-## How it works
+00 -> Addition
+01 -> Subtraction
+10 -> Bitwise AND
+11 -> Bitwise XOR
 
-Explain how your project works
+All operations are computed in parallel and the final result is selected using a hierarchy of 2-to-1 multiplexers.
 
-## How to test
+The multiplexers are implemented structurally usin basic logic gates (AND, OR, and NOT). 
 
-Explain how to use your project
+---
 
-## External hardware
+## Testbench Description
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+A Verilog testbench was created to verify te functionality of the ALU.
+The testbench applies several input combinations for each operation and checks the resulting output.
+
+The following operations are tested:
+
+- Addition
+- Subtraction
+- Bitwise AND
+- Bitwise XOR
+
+The testbench compares the simulated output with the expected values and reports whether the test pass or fail.
+
+---
+
+## GenAI Usage
+
+ChatGPT was used to assist with creating the testbench, and organizing the project documentation
+
