@@ -37,3 +37,4 @@ ChatGPT was used to assist with creating the testbench, and organizing the proje
 
 Last updated: March 3, 2026
 
+HW7 CI run test
